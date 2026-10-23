@@ -19,11 +19,13 @@ git diff --cached --stat
 
 ## 2. 비밀 정보
 
+스테이징된 내용에서 **대소문자 무시(`-i`)**로 찾고, `파일:줄번호`가 나오도록 `git grep --cached`를 쓴다. 값은 출력 단계에서 가린다.
+
 ```
-git diff --cached -U0
+git grep --cached -nIiE '(api_?key|secret|token|passw(or)?d|credential)[^=:]*[=:]|sk-[A-Za-z0-9]{10,}|ghp_|github_pat_|AKIA|xox[bap]-|AIza|BEGIN .*PRIVATE KEY|://[^/ ]+:[^@ ]+@' | sed -E 's/^([^:]+:[0-9]+:).*/\1 ***/'
 ```
 
-추가된 줄(`+`)에서 찾는다.
+- `git grep --cached`는 스테이징된 파일 **전체**를 본다(이번 변경이 아닌 기존 줄 포함). 기존 줄이면 그렇게 구분해 보고한다.
 
 | 패턴 | 예 |
 |------|-----|
