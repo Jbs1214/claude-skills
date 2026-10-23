@@ -4,12 +4,19 @@ Claude Code 플러그인 마켓플레이스. 범용 스킬 모음.
 
 ## 설치
 
-Claude Code에서:
+Claude Code에서 아래 명령을 한 줄씩 따로 실행한다.
 
-```
-/plugin marketplace add Jbs1214/claude-skills
-/plugin install jbs@jbs-skills
-```
+1. 마켓플레이스 추가
+
+   ```
+   /plugin marketplace add Jbs1214/claude-skills
+   ```
+
+2. 플러그인 설치
+
+   ```
+   /plugin install jbs@jbs-skills
+   ```
 
 설치 후 새 세션에서 사용한다.
 
