@@ -1,0 +1,12 @@
+{
+  "name": "jbs-skills",
+  "owner": { "name": "Jbs1214" },
+  "metadata": { "description": "Claude Code 범용 스킬 모음" },
+  "plugins": [
+    {
+      "name": "jbs",
+      "source": "./plugins/jbs",
+      "description": "Jbs1214의 Claude Code 범용 스킬 모음"
+    }
+  ]
+}
